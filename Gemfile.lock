@@ -82,6 +82,9 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
+    debug (1.9.1)
+      irb (~> 1.10)
+      reline (>= 0.3.8)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -89,6 +92,10 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.2.3)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.7.1)
     irb (1.11.0)
       rdoc
@@ -117,8 +124,16 @@ GEM
     nio4r (2.7.0)
     nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
+    pg (1.5.4)
+    propshaft (0.8.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     psych (5.1.2)
       stringio
+    puma (6.4.0)
+      nio4r (~> 2.0)
     racc (1.7.3)
     rack (3.0.8)
     rack-session (2.0.0)
@@ -163,9 +178,17 @@ GEM
     reline (0.4.1)
       io-console (~> 0.5)
     ruby2_keywords (0.0.5)
+    stimulus-rails (1.3.0)
+      railties (>= 6.0.0)
     stringio (3.1.0)
+    tailwindcss-rails (2.1.0-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.3.0)
     timeout (0.4.1)
+    turbo-rails (1.5.0)
+      actionpack (>= 6.0.0)
+      activejob (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     webrick (1.8.1)
@@ -178,7 +201,19 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  rails
+  debug
+  importmap-rails
+  pg (~> 1.1)
+  propshaft
+  puma (>= 5.0)
+  rails (~> 7.1.2)
+  stimulus-rails
+  tailwindcss-rails
+  turbo-rails
+  tzinfo-data
+
+RUBY VERSION
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.19
