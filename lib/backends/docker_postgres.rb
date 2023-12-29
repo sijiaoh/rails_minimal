@@ -7,6 +7,7 @@ class DockerPostgres < Thor
 
   desc "start", "docker run --detach"
   def start
+    stop
     system "docker run --detach #{opts}", exception: true
   end
 
