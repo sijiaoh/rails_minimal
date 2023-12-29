@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -eu
+
+./bin/rails db:create
+./bin/rails db:migrate
+
+./bin/lint --quiet
+bundle exec rspec
