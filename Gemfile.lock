@@ -203,14 +203,13 @@ PLATFORMS
 DEPENDENCIES
   debug
   importmap-rails
-  pg (~> 1.1)
+  pg
   propshaft
-  puma (>= 5.0)
-  rails (~> 7.1.2)
+  puma
+  rails
   stimulus-rails
   tailwindcss-rails
   turbo-rails
-  tzinfo-data
 
 RUBY VERSION
    ruby 3.2.2p53
