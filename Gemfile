@@ -28,6 +28,6 @@ group :development, :test do
   gem "rspec-rails"
   gem "shoulda-matchers"
 
-  gem "annotate"
+  gem "annotate", require: false
   gem "bullet"
 end
