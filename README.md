@@ -1,24 +1,22 @@
-# README
+## Use this template.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```bash
+git clone https://github.com/sijiaoh/rails_minimal.git your_project_name
+cd your_project_name
+bundle install
+./bin/rake 'rename_project[your_project_name]'
+git add --all
+git commit -m 'Rename project.'
+git remote set-url origin your_repository_url
+git push origin main
+git remote add upstream https://github.com/sijiaoh/rails_minimal.git
+```
 
-Things you may want to cover:
+## README
 
 - Ruby version
-
-- System dependencies
-
-- Configuration
-
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+  - `cat .ruby-version`
+- Run server
+  - `./bin/dev`
+- Run test
+  - `./bin/test`
