@@ -3,63 +3,17 @@
     {
       "warning_type": "Command Injection",
       "warning_code": 14,
-      "fingerprint": "0fd1b686ba7676966336b109a39193d3527506bd15bcb6dce77e7a709d02a553",
+      "fingerprint": "706129e5976a34f13ad7fb082c74adfb8acb7f05b41ae4e0e0e6419fbad79d45",
       "check_name": "Execute",
       "message": "Possible command injection",
       "file": "lib/backends/docker_postgres.rb",
-      "line": 16,
-      "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
-      "code": "system(\"docker rm --force #{name}\", :exception => true)",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "DockerPostgres",
-        "method": "stop"
-      },
-      "user_input": "name",
-      "confidence": "Medium",
-      "cwe_id": [
-        77
-      ],
-      "note": ""
-    },
-    {
-      "warning_type": "Command Injection",
-      "warning_code": 14,
-      "fingerprint": "3796063fda8b6339e7b8eb875be990e2a8ff030b65314df4361a631f80d37bc1",
-      "check_name": "Execute",
-      "message": "Possible command injection",
-      "file": "lib/backends/docker_postgres.rb",
-      "line": 5,
-      "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
-      "code": "exec(\"docker run --rm #{opts}\")",
-      "render_path": null,
-      "location": {
-        "type": "method",
-        "class": "DockerPostgres",
-        "method": "up"
-      },
-      "user_input": "opts",
-      "confidence": "Medium",
-      "cwe_id": [
-        77
-      ],
-      "note": ""
-    },
-    {
-      "warning_type": "Command Injection",
-      "warning_code": 14,
-      "fingerprint": "463b8d4ecf4e66ab7d69de07aa41bc563a96ca08ca7c779fff3a80e53a838e2d",
-      "check_name": "Execute",
-      "message": "Possible command injection",
-      "file": "lib/backends/docker_postgres.rb",
-      "line": 21,
+      "line": 22,
       "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
       "code": "system(\"docker rm --force --volumes #{name}\", :exception => true)",
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "DockerPostgres",
+        "class": "Backends::DockerPostgres",
         "method": "rm"
       },
       "user_input": "name",
@@ -72,17 +26,40 @@
     {
       "warning_type": "Command Injection",
       "warning_code": 14,
-      "fingerprint": "a6a37670a06bf658e897c9f18df992ef984f549b19f0488280abad4efcc6e404",
+      "fingerprint": "8cfc516c4367695868e9e492e8f6bb1abea284e3e466958b6fb3fba810910e9a",
       "check_name": "Execute",
       "message": "Possible command injection",
       "file": "lib/backends/docker_postgres.rb",
-      "line": 11,
+      "line": 6,
+      "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
+      "code": "exec(\"docker run --rm #{opts}\")",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Backends::DockerPostgres",
+        "method": "up"
+      },
+      "user_input": "opts",
+      "confidence": "Medium",
+      "cwe_id": [
+        77
+      ],
+      "note": ""
+    },
+    {
+      "warning_type": "Command Injection",
+      "warning_code": 14,
+      "fingerprint": "acd79b16e61a28ffac37959f57504c21b965666a5d94a2bf5c612cceafeaaa4b",
+      "check_name": "Execute",
+      "message": "Possible command injection",
+      "file": "lib/backends/docker_postgres.rb",
+      "line": 12,
       "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
       "code": "system(\"docker run --detach #{opts}\", :exception => true)",
       "render_path": null,
       "location": {
         "type": "method",
-        "class": "DockerPostgres",
+        "class": "Backends::DockerPostgres",
         "method": "start"
       },
       "user_input": "opts",
@@ -91,8 +68,31 @@
         77
       ],
       "note": ""
+    },
+    {
+      "warning_type": "Command Injection",
+      "warning_code": 14,
+      "fingerprint": "b9da2b7dbb94589d3b3305094c2eb54d724b3fcb0c32712253dce3def0f70b1b",
+      "check_name": "Execute",
+      "message": "Possible command injection",
+      "file": "lib/backends/docker_postgres.rb",
+      "line": 17,
+      "link": "https://brakemanscanner.org/docs/warning_types/command_injection/",
+      "code": "system(\"docker rm --force #{name}\", :exception => true)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "Backends::DockerPostgres",
+        "method": "stop"
+      },
+      "user_input": "name",
+      "confidence": "Medium",
+      "cwe_id": [
+        77
+      ],
+      "note": ""
     }
   ],
-  "updated": "2023-12-30 06:28:59 +0900",
+  "updated": "2024-01-01 09:25:25 +0900",
   "brakeman_version": "6.1.1"
 }
