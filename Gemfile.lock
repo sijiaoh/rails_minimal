@@ -121,6 +121,7 @@ GEM
       i18n (>= 1.8.11, < 2)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    htmlbeautifier (1.4.3)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.1)
@@ -308,6 +309,7 @@ DEPENDENCIES
   erb_lint
   factory_bot_rails
   faker
+  htmlbeautifier
   importmap-rails
   pg
   propshaft
