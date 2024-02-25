@@ -7,9 +7,6 @@ while (($# > 0)); do
   -a | --autocorrect)
     AUTOCORRECT=""
     ;;
-  -v | --verbose)
-    VERBOSE=""
-    ;;
   -x | --debug)
     set -x
     ;;
@@ -17,17 +14,7 @@ while (($# > 0)); do
   shift
 done
 
-function exec() {
-  if [ -n "${VERBOSE+x}" ]; then
-    "$@"
-  else
-    "$@" >/dev/null
-  fi
-}
-
-exec bundle exec rubocop ${AUTOCORRECT+--autocorrect}
-exec bundle exec htmlbeautifier ${AUTOCORRECT---lint-only} app/views/**/*.html.erb
-exec bundle exec erblint . ${AUTOCORRECT+--autocorrect}
-exec npx prettier ${AUTOCORRECT+--write} ${AUTOCORRECT---check} .
-
-echo "Lint passed."
+bundle exec rubocop ${AUTOCORRECT+--autocorrect}
+bundle exec htmlbeautifier ${AUTOCORRECT---lint-only} app/views/**/*.html.erb
+bundle exec erblint . ${AUTOCORRECT+--autocorrect}
+npx prettier ${AUTOCORRECT+--write} ${AUTOCORRECT---check} .
