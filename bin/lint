@@ -7,14 +7,27 @@ while (($# > 0)); do
   -a | --autocorrect)
     AUTOCORRECT=""
     ;;
-  --quiet)
-    QUIET=""
+  -v | --verbose)
+    VERBOSE=""
+    ;;
+  -x | --debug)
+    set -x
     ;;
   esac
   shift
 done
 
-bundle exec rubocop ${QUIET+--format quiet} ${AUTOCORRECT+--autocorrect}
-bundle exec htmlbeautifier ${AUTOCORRECT---lint-only} app/views/**/*.html.erb
-bundle exec erblint . ${AUTOCORRECT+--autocorrect}
-npm run lint${AUTOCORRECT+:fix}
+function exec() {
+  if [ -n "${VERBOSE+x}" ]; then
+    "$@"
+  else
+    "$@" >/dev/null
+  fi
+}
+
+exec bundle exec rubocop ${AUTOCORRECT+--autocorrect}
+exec bundle exec htmlbeautifier ${AUTOCORRECT---lint-only} app/views/**/*.html.erb
+exec bundle exec erblint . ${AUTOCORRECT+--autocorrect}
+exec npx prettier ${AUTOCORRECT+--write} ${AUTOCORRECT---check} .
+
+echo "Lint passed."

@@ -11,7 +11,7 @@ set -eu
 # https://github.com/rails/tailwindcss-rails/issues/153
 ./bin/rails tailwindcss:build
 
-./bin/lint --quiet
+./bin/lint
 bundle exec annotate --frozen
 bundle exec brakeman --quiet --no-pager --no-summary
 bundle exec rspec
