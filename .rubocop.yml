@@ -31,7 +31,9 @@ Metrics/AbcSize:
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 RSpec/NamedSubject:
-  EnforcedStyle: always
+  Enabled: true
+RSpec/ImplicitSubject:
+  EnforcedStyle: disallow
 RSpec/ExampleLength:
   Enabled: false
 RSpec/NestedGroups:
