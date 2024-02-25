@@ -31,6 +31,8 @@ FactoryBot/ConsistentParenthesesStyle:
 # Namespace::Class is more readable.
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
+  Exclude:
+    - "config/application.rb"
 
 # Write code as long as we need.
 Metrics/BlockLength:
