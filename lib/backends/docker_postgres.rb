@@ -1,5 +1,4 @@
-module Backends
-  class DockerPostgres < Thor
+  class Backends::DockerPostgres < Thor
     desc "up", "docker run --rm"
     def up
       stop
@@ -43,4 +42,3 @@ module Backends
     def volume = name
     def image = "postgres:16"
   end
-end

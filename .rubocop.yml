@@ -20,6 +20,8 @@ Style/MethodCallWithArgsParentheses:
   AllowParenthesesInChaining: true
   AllowParenthesesInCamelCaseMethod: true
   AllowParenthesesInStringInterpolation: true
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
 
 Metrics/BlockLength:
   Enabled: false

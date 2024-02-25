@@ -18,8 +18,7 @@ require "action_cable/engine"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module RailsMinimal
-  class Application < Rails::Application
+  class RailsMinimal::Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
@@ -39,4 +38,3 @@ module RailsMinimal
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
-end
