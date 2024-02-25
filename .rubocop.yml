@@ -9,10 +9,13 @@ AllCops:
   TargetRubyVersion: 3.2
   NewCops: enable
 
+# No strict comment rule.
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/Documentation:
   Enabled: false
+
+# Fewer but necessary parentheses.
 Style/MethodCallWithArgsParentheses:
   Enabled: true
   EnforcedStyle: omit_parentheses
@@ -20,9 +23,14 @@ Style/MethodCallWithArgsParentheses:
   AllowParenthesesInChaining: true
   AllowParenthesesInCamelCaseMethod: true
   AllowParenthesesInStringInterpolation: true
+FactoryBot/ConsistentParenthesesStyle:
+  Enabled: false
+
+# Namespace::Class is more readable.
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
 
+# Write code as long as we need.
 Metrics/BlockLength:
   Enabled: false
 Metrics/MethodLength:
@@ -30,6 +38,7 @@ Metrics/MethodLength:
 Metrics/AbcSize:
   Enabled: false
 
+# More readable spec.
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 RSpec/NamedSubject:
@@ -43,6 +52,7 @@ RSpec/NestedGroups:
 RSpec/MultipleExpectations:
   Enabled: false
 
+# More convenient mock and stub.
 RSpec/ExpectInHook:
   Enabled: false
 RSpec/AnyInstance:
@@ -50,7 +60,4 @@ RSpec/AnyInstance:
 RSpec/StubbedMock:
   Enabled: false
 RSpec/MessageSpies:
-  Enabled: false
-
-FactoryBot/ConsistentParenthesesStyle:
   Enabled: false
