@@ -16,5 +16,6 @@ done
 
 bundle exec rubocop ${AUTOCORRECT+--autocorrect}
 bundle exec htmlbeautifier ${AUTOCORRECT---lint-only} app/views/**/*.html.erb
-bundle exec erblint . ${AUTOCORRECT+--autocorrect}
+bundle exec erblint ${AUTOCORRECT+--autocorrect} .
+npx eslint ${AUTOCORRECT+--fix} .
 npx prettier ${AUTOCORRECT+--write} ${AUTOCORRECT---check} .
