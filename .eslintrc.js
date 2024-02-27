@@ -19,8 +19,8 @@ module.exports = {
     ecmaVersion: "latest",
   },
   rules: {
+    "global-require": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
-    "global-require": "off",
   },
 };
