@@ -42,11 +42,18 @@ Metrics/MethodLength:
 Metrics/AbcSize:
   Enabled: false
 
+# Use reduce(:+) to join html elements.
+Performance/Sum:
+  Exclude:
+    - "app/helpers/*.rb"
+
 # More readable spec.
 RSpec/DescribedClass:
   EnforcedStyle: explicit
 RSpec/NamedSubject:
   Enabled: true
+  Exclude:
+    - "spec/support/*.rb"
 RSpec/ImplicitSubject:
   EnforcedStyle: disallow
 RSpec/ExampleLength:
