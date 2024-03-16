@@ -20,3 +20,7 @@ git remote add upstream https://github.com/sijiaoh/rails_minimal.git
   - `./bin/dev`
 - Run test
   - `./bin/test`
+
+## Google Analytics
+
+Set environment variable `GOOGLE_TAG_ID` to enable google analytics.
