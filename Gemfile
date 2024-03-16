@@ -25,9 +25,12 @@ group :development, :test do
 
   gem "brakeman", require: false
 
+  gem "capybara"
+  gem "rspec-rails"
+  gem "selenium-webdriver"
+
   gem "factory_bot_rails"
   gem "faker"
-  gem "rspec-rails"
   gem "shoulda-matchers"
 
   gem "annotate", require: false
