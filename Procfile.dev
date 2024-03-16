@@ -1,2 +1,1 @@
-postgres: bin/docker_postgres up
 web: bin/rails server

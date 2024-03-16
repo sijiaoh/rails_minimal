@@ -15,5 +15,3 @@ set -eu
 bundle exec annotate --frozen
 bundle exec brakeman --quiet --no-pager --no-summary
 bundle exec rspec
-
-./bin/docker_postgres stop
